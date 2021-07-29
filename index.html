@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
   <title>NibbleUI</title>
@@ -19,60 +14,63 @@
 <!-- Sidebar -->
 <section id="sidebar">
   <div class="inner">
+    <div class="col-4"><span class="image fit"><img src="assets/css/images/Logo_Trans.png" alt=""/></span>
+    </div>
     <nav>
       <ul>
         <li><a href="#intro">Welcome</a></li>
-        <li><a href="#one">Bank</a></li>
-        <li><a href="#two">User</a></li>
-        <!-- <li><a href="#three">Get in touch</a></li>-->
+        <li><a href="#start">Getting started</a></li>
+        <li><a href="#bank">Bank UI</a></li>
+        <li><a href="#user">User UI</a></li>
       </ul>
     </nav>
   </div>
 </section>
 
-<!-- Wrapper -->
 <div id="wrapper">
-  <!-- Intro -->
 
   <section id="intro" class="wrapper style1 fullscreen fade-up">
     <div class="inner">
 
-      <h1>Nibble</h1>
-      <p>First, you will need this: <a href="https://metamask.io/download.html">Install MetaMask</a><br/>
-        Then you need to login with your MetaMask account on the Ropsten testnet.
+      <h1>NibbleUI</h1>
+      <p>First, you will need this: <a href="https://metamask.io/download.html" target="_blank"
+                                       rel="noopener noreferrer">Install MetaMask</a><br/>
+        Then you need to login with your MetaMask account on the Ropsten testnet. <br/>
+        No account or need any help ? <a href="#start" target="_blank"
+                                         rel="noopener noreferrer">Click here !</a>
       </p>
-      <li><a href="#one" class="button scrolly">Now you are good to go !</a></li>
+      <ul class="actions">
+        <li><a href="#start" class="button primary large">Getting Started</a></li>
+        <li><a href="#bank" class="button large">Bank UI</a></li>
+        <li><a href="#user" class="button large">User UI</a></li>
+      </ul>
+      <!--<a href="#bank" class="button scrolly">Good to go ??</a> -->
       </ul>
     </div>
   </section>
 
-  <!-- One -->
-  <section id="one" class="wrapper style1 fullscreen fade-up">
+  <section id="start" class="wrapper style1 fullscreen fade-up">
     <div class="container">
-      <iframe class="responsive-iframe" src="./bank/"></iframe>
+      <iframe class="responsive-iframe" src="./tutorial/tutorial.html"></iframe>
     </div>
 
   </section>
 
-  <!-- Two -->
-  <section id="two" class="wrapper style1 fullscreen fade-up">
+  <section id="bank" class="wrapper style1 fullscreen fade-up">
     <div class="container">
-      <iframe class="responsive-iframe" src="./user/"></iframe>
+      <iframe class="responsive-iframe-solui" src="./bank/"></iframe>
+    </div>
+
+  </section>
+
+  <section id="user" class="wrapper style1 fullscreen fade-up">
+    <div class="container">
+      <iframe class="responsive-iframe-solui" src="./user/"></iframe>
     </div>
 
   </section>
 
 </div>
-
-<!-- Footer -->
-<footer id="footer" class="wrapper style1-alt">
-  <div class="inner">
-    <ul class="menu">
-      <li>&copy; Untitled. All rights reserved.</li>
-      <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
-  </div>
-</footer>
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
