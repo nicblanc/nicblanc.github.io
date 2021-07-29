@@ -3927,7 +3927,7 @@ input, select, textarea {
   overflow-x:hidden;
   overflow-Y:hidden;
   border: none;         /* Reset default border */
-  height: 100%;
+  height: 100vh;
   width: calc(100% + 17px);
 }
 
