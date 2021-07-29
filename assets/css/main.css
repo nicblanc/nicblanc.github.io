@@ -3927,7 +3927,7 @@ input, select, textarea {
   overflow-x:hidden;
   overflow-Y:hidden;
   border: none;         /* Reset default border */
-  height: 100vh;       /* Viewport-relative units */
+  height: 100%;
   width: calc(100% + 17px);
 }
 
@@ -3941,6 +3941,6 @@ input, select, textarea {
   overflow-x:hidden;
   overflow-Y:hidden;
   border: none;         /* Reset default border */
-  height: 100vh;
+  height: 100%;
   width: calc(100% + 17px);
 }
