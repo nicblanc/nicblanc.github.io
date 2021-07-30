@@ -5,6 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/modal-video.css"/>
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css"/>
   </noscript>
@@ -37,14 +38,19 @@
                                        rel="noopener noreferrer">Install MetaMask</a><br/>
         Then you need to login with your MetaMask account on the Ropsten testnet. <br/>
         No account or need any help ? <a href="#start" target="_blank"
-                                         rel="noopener noreferrer">Click here !</a>
+                                         rel="noopener noreferrer">Click here !</a><br>
+        But what is <a href="" class="js-modal-youtube-btn" data-video-id="ir1nlqqvnv0">Nibble</a > anyway ?
+        <script>
+          window.addEventListener('DOMContentLoaded',function(){
+            new ModalVideo(".js-modal-youtube-btn",{channel:'youtube'});
+          });
+        </script>
       </p>
       <ul class="actions">
         <li><a href="#start" class="button primary large">Getting Started</a></li>
         <li><a href="#bank" class="button large">Bank UI</a></li>
         <li><a href="#user" class="button large">User UI</a></li>
       </ul>
-      <!--<a href="#bank" class="button scrolly">Good to go ??</a> -->
       </ul>
     </div>
   </section>
@@ -80,6 +86,7 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/modal-video.js"></script>
 
 </body>
 </html>
