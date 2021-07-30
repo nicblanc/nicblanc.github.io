@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <title>NibbleUI</title>
   <meta charset="utf-8"/>
@@ -11,7 +11,6 @@
   </noscript>
 </head>
 <body class="is-preload" style="overflow-y: hidden;">
-
 <!-- Sidebar -->
 <section id="sidebar">
   <div class="inner">
@@ -21,8 +20,8 @@
       <ul>
         <li><a href="#intro">Welcome</a></li>
         <li><a href="#start">Getting started</a></li>
-        <li><a href="#bank">Bank UI</a></li>
-        <li><a href="#user">User UI</a></li>
+        <li><a href="#bank" id="bankAnchor">Bank UI</a></li>
+        <li><a href="#user" id="userAnchor">User UI</a></li>
       </ul>
     </nav>
   </div>
@@ -39,17 +38,13 @@
         Then you need to login with your MetaMask account on the Ropsten testnet. <br/>
         No account or need any help ? <a href="#start" target="_blank"
                                          rel="noopener noreferrer">Click here !</a><br>
-        But what is <a href="" class="js-modal-youtube-btn" data-video-id="ir1nlqqvnv0">Nibble</a > anyway ?
-        <script>
-          window.addEventListener('DOMContentLoaded',function(){
-            new ModalVideo(".js-modal-youtube-btn",{channel:'youtube'});
-          });
-        </script>
+        But what is <a href="" class="js-modal-youtube-btn" data-video-id="ir1nlqqvnv0">Nibble</a>
+        anyway ?
       </p>
       <ul class="actions">
         <li><a href="#start" class="button primary large">Getting Started</a></li>
-        <li><a href="#bank" class="button large">Bank UI</a></li>
-        <li><a href="#user" class="button large">User UI</a></li>
+        <li><a href="#bank" id="bankButton" class="button large">Bank UI</a></li>
+        <li><a href="#user" id="userButton" class="button large">User UI</a></li>
       </ul>
       </ul>
     </div>
@@ -57,21 +52,21 @@
 
   <section id="start" class="wrapper style1 fullscreen fade-up">
     <div class="container">
-      <iframe class="responsive-iframe" src="./tutorial/tutorial.html"></iframe>
+      <iframe name="startFrame" class="responsive-iframe" src="./tutorial/tutorial.html"></iframe>
     </div>
 
   </section>
 
   <section id="bank" class="wrapper style1 fullscreen fade-up">
     <div class="container">
-      <iframe class="responsive-iframe-solui" src="./bank/"></iframe>
+      <iframe name="bankFrame" class="responsive-iframe-solui" src="./bank/"></iframe>
     </div>
 
   </section>
 
   <section id="user" class="wrapper style1 fullscreen fade-up">
     <div class="container">
-      <iframe class="responsive-iframe-solui" src="./user/"></iframe>
+      <iframe name="userFrame" class="responsive-iframe-solui" src="./user/"></iframe>
     </div>
 
   </section>
@@ -87,6 +82,29 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/modal-video.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded',function(){
+    if (typeof web3 !== 'undefined') {
+      console.log('web3 is enabled')
+      if (web3.currentProvider.isMetaMask === true) {
+        console.log('MetaMask is active')
+      } else {
+        document.getElementById("bankButton").style.visibility = "hidden";
+        document.getElementById("userButton").style.visibility = "hidden";
+        document.getElementById("bankAnchor").style.visibility = "hidden";
+        document.getElementById("userAnchor").style.visibility = "hidden";
+        console.log('MetaMask is not available')
+      }
+    } else {
+      document.getElementById("bankButton").style.visibility = "hidden";
+      document.getElementById("userButton").style.visibility = "hidden";
+      document.getElementById("bankAnchor").style.visibility = "hidden";
+      document.getElementById("userAnchor").style.visibility = "hidden";
+      console.log('web3 is not found')
+    }
+    new ModalVideo(".js-modal-youtube-btn",{channel:'youtube'});
+  });
+</script>
 </body>
 </html>
